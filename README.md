@@ -6,6 +6,8 @@ Various basic scripts to test MySQL/MariaDB for adherence to Normal Forms
 
 This collection of scripts is intended to provide basic testing to help a DBA work through Normal Forms as a "best practice".
 
+These tools are rather basic and provide little more than guide-points and a given database will likely still require an in-context analysis by a DBA. The goal of these tools is to provide points of interest for more in-depth study, saving the DBA time and allowing for more focused efforts.
+
 ## Prerequisites
 
 Requires Python 3.x (preferrably 3.8+) and uses the following libraries:
