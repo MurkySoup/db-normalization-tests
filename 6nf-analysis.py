@@ -110,7 +110,7 @@ def analyze_mysql_sixth_normal_form(engine):
         for issue in issues:
             print(f'-> {issue}')
     else:
-        print('-> None. All tables comply with Domain-Key Normal Form.')
+        print('-> None')
 
 
 if __name__ == '__main__':

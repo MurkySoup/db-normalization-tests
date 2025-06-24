@@ -109,12 +109,12 @@ def analyze_mysql_fifth_normal_form(engine):
                     violations.append(attrs)
 
         if violations:
-            print(f'  Violations detected in table "{table}":')
+            print(f'Violations detected in table "{table}":')
 
             for v in violations:
-                print(f'    - Join dependency not preserved on attributes: {v}')
+                print(f'-> Join dependency not preserved on attributes: {v}')
         else:
-            print(f'  No 5NF violations detected in table "{table}".')
+            print('-> No violations detected in table "{table}".')
 
         print()
 

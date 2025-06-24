@@ -82,21 +82,24 @@ def analyze_mysql_first_normal_form(engine):
             issues.append(f'Table "{table}" has duplicate column names.')
 
         # Rule 3: Using row order to convey information is not permitted.
-        # XXX This cannot be programmatically verified with understanding the context of the data being analyzed
+        # XXX This cannot be programmatically verified without understanding the context of the data being analyzed
 
         # Rule 4: Mixing data types within the same column is not permitted
         for col in df.columns:
             types = df[col].dropna().map(type).unique()
+
             if len(types) > 1:
                 issues.append(f'Table "{table}" column "{col}" contains mixed data types: {types}')
 
         # Rule 5: Having a table without a primary key is not permitted
         pk = inspector.get_pk_constraint(table)
+
         if not pk.get('constrained_columns'):
             issues.append(f'Table "{table}" does not have a primary key.')
 
         # Rule 6: Repeating groups are not permitted
         repeating_cols = [col for col in df.columns if any(char.isdigit() for char in col)]
+
         if repeating_cols:
             issues.append(f'Table "{table}" might contain repeating groups: {repeating_cols}')
 
