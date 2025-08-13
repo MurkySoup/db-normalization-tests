@@ -1,6 +1,6 @@
 # db-normalization-tests
 
-Various basic scripts to test MySQL/MariaDB for adherence to Normal Forms
+Various basic scripts to test MySQL/MariaDB databases for adherence to Normal Forms
 
 ## Description
 
