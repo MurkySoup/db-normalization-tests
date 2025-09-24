@@ -33,7 +33,7 @@ First Normal Form (1NF):
 
 Second Normal Form (2NF): Each non-key attribute must rely on the entire primary key.
 
-Third Normal Form (3NF): Every attribute in a table should depend on the key, the whole key and nothing buy the key. This is also called Boyce-Codd Normal Form (BCNF).
+Third Normal Form (3NF): Every attribute in a table should depend on the key, the whole key and nothing but the key. This is also called Boyce-Codd Normal Form (BCNF).
 
 Fourth Normal Form (4NF): Multi-value dependencies in a table must use multi-value dependencies on the key.
 
